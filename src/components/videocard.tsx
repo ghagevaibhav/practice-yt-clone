@@ -1,7 +1,7 @@
 import { Component } from "react"
 
 export function VideoCard(props: any){
-    return <div className="p-3"> 
+    return <div className="p-3 cursor-pointer"> 
         <img className="rounded-xl" src={props.image} alt=""></img>
         <div className="gird grid-cols-10 pt-2">
             <div className="col-span-1">
