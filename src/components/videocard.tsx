@@ -1,24 +1,24 @@
 import { Component } from "react"
 
-export function VideoCard(){
-    return <div> 
-        <img className="rounded-xl" src="/image.jpg" alt=""></img>
-        <div className="gird grid-cols-12 pt-2">
+export function VideoCard(props: any){
+    return <div className="p-3"> 
+        <img className="rounded-xl" src={props.image} alt=""></img>
+        <div className="gird grid-cols-10 pt-2">
             <div className="col-span-1">
-                <img className={'rounded-full w-12 h-12'} src="/channel.png" alt="" />
+                <img className={'rounded-full w-12 h-12'} src={props.thumbimage} alt="" />
             </div>
             
-            <div className="col-span-11 pl-2">
+            <div className="col-span-9 pl-2">
                 <div>
-                    VXLLAIN, VØJ, Narvent - Distant Echoes 
+                    {props.title} 
                 </div>
 
-                <div className="text-gray-400 text-base">
-                    Vaibhav Ghage
+                <div className="col-span-9 text-gray-400 text-base">
+                    {props.author}
                 </div>
-                
-                <div className="text-gray-400 text-base">
-                    5 Mn | 12 hours ago
+
+                <div className="col-span-9 text-gray-400 text-base">
+                    {props.views} | {props.timestamp}
                 </div>
                     
             </div>
